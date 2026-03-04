@@ -5,8 +5,10 @@ size(800,600);
 background(132,132,142);
 translate(400,300);
 //ground
-fill(219,174,49);
+fill(201,158,41);
 noStroke();
+ellipse(0,100,900,200);
+fill(219,174,49);
 ellipse(200,120,600,200);
 ellipse(-200,120,750,200);
 //light blue
@@ -30,3 +32,6 @@ fill(81,81,82);
 noStroke();
 ellipse(200,400,600,400);
 ellipse(-200,400,750,400);
+//buildings
+rect(80,-70,250,100); //right 
+rect(-350,-70,230,100); //left
