@@ -1,18 +1,24 @@
 //fear of future
 //Beibei 2-4 Mar 2 26
-int smokeX;
+int smokeX, smokeY;
 void setup() {
   size(800, 600, P2D);
   smokeX=0;
+  smokeY=0;
 } //end setup
+
 void draw() {
   background(180, 166, 138);
-  translate(400, 300);
+  translate(400,300);
   //move smoke
-  smoke(smokeX, 130);
-  smokeX = smokeX+2;
-  if (smokeX>400) {
+  smoke(smokeX, smokeY);
+  smokeX = smokeX+1;
+  if (smokeX>200) {
     smokeX =0;
+  }
+  smokeY=smokeY-1;
+  if (smokeY<-200){
+  smokeY=0;
   }
 
 //ground
@@ -53,9 +59,9 @@ rect(115, -170, 40, 100);  //long left
 rect(260, -170, 25, 100); //long right
 rect(80, -70, 250, 100); //right
 };
-void smoke(int x, int y ) {
+void smoke(int smokeX, int smokeY ) {
   pushMatrix();
-  translate (x,y);
+  translate(smokeX,smokeY);
   //smoke
   fill(255);
   //left (right building)
